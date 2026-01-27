@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Pepito | WE DON'T SPEAK WE ONLY PERFORM!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #000; }
+        .hero-gradient { 
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(220, 38, 38, 0.2)), 
+                        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        .nav-link:hover { color: #dc2626; transition: 0.3s; }
+    </style>
+</head>
+<body class="text-white">
+
+    <nav class="fixed w-full z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="flex items-center">
+                <img src="https://i.imgur.com/aVovgAz.png" alt="Team Pepito Logo" class="h-12 w-auto">
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8 font-bold text-xs uppercase tracking-widest text-white/70">
+                <a href="#home" class="nav-link nav-home-fr">Accueil</a>
+                <a href="#home" class="nav-link nav-home-en hidden">Home</a>
+                <a href="#services" class="nav-link nav-serv-fr">Services</a>
+                <a href="#services" class="nav-link nav-serv-en hidden">Services</a>
+                <a href="#about" class="nav-link nav-about-fr">Le Coach</a>
+                <a href="#about" class="nav-link nav-about-en hidden">The Coach</a>
+                
+                <button onclick="toggleLanguage()" class="border border-red-600 px-3 py-1 rounded text-red-500 hover:bg-red-600 hover:text-white transition">
+                    <span class="lang-btn-text">EN</span>
+                </button>
+                
+                <a href="#contact" class="bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-600/20">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-gradient h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-5xl">
+            <div class="inline-block border-2 border-red-600 text-red-500 text-xs font-black px-6 py-1 rounded-md mb-6 uppercase tracking-[0.4em] bg-red-600/10">
+                SPORTS COACH
+            </div>
+            <h1 class="text-5xl md:text-8xl font-black text-white mb-6 leading-none tracking-tighter uppercase italic">
+                WE DON'T SPEAK<br><span class="text-red-600 uppercase">WE ONLY PERFORM!</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-white/80 mb-10 max-w-2xl mx-auto font-bold italic tracking-tight">
+                <span class="fr">Ton aventure commence maintenant ! Arrête d'attendre et rejoins TA TEAM !</span>
+                <span class="en hidden">Your journey starts now! Stop waiting and join YOUR TEAM!</span>
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-red-600 text-white px-12 py-5 rounded-xl font-black text-lg hover:bg-red-700 transition uppercase tracking-tight shadow-xl shadow-red-600/40">
+                    <span class="fr">Réserver mon bilan</span><span class="en hidden">Book a Session</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto text-center">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-red-600 transition group">
+                <i class="fas fa-running text-3xl text-red-600 mb-6 block group-hover:scale-110 transition"></i>
+                <h4 class="text-xl font-black mb-3 uppercase italic"><span class="fr">Prépa Spécifique</span><span class="en hidden">Conditioning</span></h4>
+                <p class="text-white/50 text-sm"><span class="fr">Foot, Hockey, Tennis. Optimisation vitesse & explosivité.</span><span class="en hidden">Soccer, Hockey, Tennis. Speed & explosiveness optimization.</span></p>
+            </div>
+            <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-red-600 transition group">
+                <i class="fas fa-dumbbell text-3xl text-red-600 mb-6 block group-hover:scale-110 transition"></i>
+                <h4 class="text-xl font-black mb-3 uppercase italic"><span class="fr">Prépa Générale</span><span class="en hidden">Strength</span></h4>
+                <p class="text-white/50 text-sm"><span class="fr">Renforcement complet et conditionnement indestructible.</span><span class="en hidden">Total strengthening and indestructible foundation.</span></p>
+            </div>
+            <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-red-600 transition group">
+                <i class="fas fa-fire text-3xl text-red-600 mb-6 block group-hover:scale-110 transition"></i>
+                <h4 class="text-xl font-black mb-3 uppercase italic"><span class="fr">Transformation</span><span class="en hidden">Transformation</span></h4>
+                <p class="text-white/50 text-sm"><span class="fr">Perte de poids ou prise de masse. Plan adapté.</span><span class="en hidden">Fat loss or muscle gain. Tailored plan.</span></p>
+            </div>
+            <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-red-600 transition group">
+                <i class="fas fa-heartbeat text-3xl text-red-600 mb-6 block group-hover:scale-110 transition"></i>
+                <h4 class="text-xl font-black mb-3 uppercase italic"><span class="fr">Fitness & Santé</span><span class="en hidden">Fitness & Health</span></h4>
+                <p class="text-white/50 text-sm"><span class="fr">Améliore ton cardio et ta vitalité durablement.</span><span class="en hidden">Boost your cardio and vitality sustainably.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-black border-t border-white/10 text-center px-6">
+        <div class="mb-10">
+            <img src="https://i.imgur.com/jpCxCcR.png" alt="Team Pepito Performance" class="mx-auto max-w-[250px] md:max-w-[350px] h-auto grayscale hover:grayscale-0 transition duration-500">
+        </div>
+        
+        <div class="flex justify-center items-center space-x-12 mb-10">
+            <a href="https://www.facebook.com/profile.php?id=61586481653827" target="_blank" class="text-white/40 hover:text-red-600 transition text-4xl">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/teampepito/" target="_blank" class="text-white/40 hover:text-red-600 transition text-4xl">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:maximefc567@gmail.com" class="text-white/40 hover:text-red-600 transition text-4xl">
+                <i class="fab fa-google"></i>
+            </a>
+        </div>
+        
+        <p class="text-white/20 text-[10px] font-black uppercase tracking-[0.4em]">© 2026 WE DON'T SPEAK WE ONLY PERFORM!</p>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const frElems = document.querySelectorAll('.fr, .nav-home-fr, .nav-serv-fr, .nav-about-fr');
+            const enElems = document.querySelectorAll('.en, .nav-home-en, .nav-serv-en, .nav-about-en');
+            const btnText = document.querySelector('.lang-btn-text');
+
+            if (btnText.innerText === 'EN') {
+                frElems.forEach(el => el.classList.add('hidden'));
+                enElems.forEach(el => el.classList.remove('hidden'));
+                btnText.innerText = 'FR';
+            } else {
+                frElems.forEach(el => el.classList.remove('hidden'));
+                enElems.forEach(el => el.classList.add('hidden'));
+                btnText.innerText = 'EN';
+            }
+        }
+    </script>
+</body>
+</html>
