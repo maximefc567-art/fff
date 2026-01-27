@@ -16,6 +16,9 @@
             background-position: center; 
         }
         .nav-link:hover { color: #dc2626; transition: 0.3s; }
+        /* Effet de survol sur les images services */
+        .service-card:hover img { transform: scale(1.05); }
+        .service-card img { transition: transform 0.5s ease; }
     </style>
 </head>
 <body class="text-white">
@@ -63,34 +66,118 @@
         </div>
     </section>
 
-    <section id="services" class="py-24 px-6 max-w-7xl mx-auto text-center">
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-red-600 transition group">
-                <i class="fas fa-running text-3xl text-red-600 mb-6 block group-hover:scale-110 transition"></i>
-                <h4 class="text-xl font-black mb-3 uppercase italic"><span class="fr">Prépa Spécifique</span><span class="en hidden">Conditioning</span></h4>
-                <p class="text-white/50 text-sm"><span class="fr">Foot, Hockey, Tennis. Optimisation vitesse & explosivité.</span><span class="en hidden">Soccer, Hockey, Tennis. Speed & explosiveness optimization.</span></p>
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h3 class="text-4xl font-black uppercase"><span class="fr">Nos Programmes</span><span class="en hidden">Our Programs</span></h3>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="service-card group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer border border-white/10">
+                <img src="https://i.imgur.com/esFNGT3.jpeg" alt="Service 1" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <h4 class="text-2xl font-black uppercase italic mb-3 text-red-600">Performance</h4>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        <span class="fr">Optimisation de la performance athlétique. Vitesse, puissance et explosivité pour dominer ton sport.</span>
+                        <span class="en hidden">Athletic performance optimization. Speed, power, and explosiveness to dominate your sport.</span>
+                    </p>
+                </div>
             </div>
-            <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-red-600 transition group">
-                <i class="fas fa-dumbbell text-3xl text-red-600 mb-6 block group-hover:scale-110 transition"></i>
-                <h4 class="text-xl font-black mb-3 uppercase italic"><span class="fr">Prépa Générale</span><span class="en hidden">Strength</span></h4>
-                <p class="text-white/50 text-sm"><span class="fr">Renforcement complet et conditionnement indestructible.</span><span class="en hidden">Total strengthening and indestructible foundation.</span></p>
+
+            <div class="service-card group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer border border-white/10">
+                <img src="https://i.imgur.com/j8fov7x.jpeg" alt="Service 2" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <h4 class="text-2xl font-black uppercase italic mb-3 text-red-600">Transformation</h4>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        <span class="fr">Change ton corps radicalement. Perte de gras et prise de muscle avec une méthode prouvée.</span>
+                        <span class="en hidden">Radically change your body. Fat loss and muscle gain with a proven method.</span>
+                    </p>
+                </div>
             </div>
-            <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-red-600 transition group">
-                <i class="fas fa-fire text-3xl text-red-600 mb-6 block group-hover:scale-110 transition"></i>
-                <h4 class="text-xl font-black mb-3 uppercase italic"><span class="fr">Transformation</span><span class="en hidden">Transformation</span></h4>
-                <p class="text-white/50 text-sm"><span class="fr">Perte de poids ou prise de masse. Plan adapté.</span><span class="en hidden">Fat loss or muscle gain. Tailored plan.</span></p>
+
+            <div class="service-card group relative h-[500px] rounded-3xl overflow-hidden cursor-pointer border border-white/10">
+                <img src="https://i.imgur.com/j8fov7x.jpeg" alt="Service 3" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90"></div>
+                <div class="absolute bottom-0 left-0 p-8">
+                    <h4 class="text-2xl font-black uppercase italic mb-3 text-red-600">Strength & Health</h4>
+                    <p class="text-white/80 text-sm leading-relaxed">
+                        <span class="fr">Construis une fondation solide. Santé, longévité et force fonctionnelle au quotidien.</span>
+                        <span class="en hidden">Build a solid foundation. Health, longevity, and functional strength for daily life.</span>
+                    </p>
+                </div>
             </div>
-            <div class="bg-zinc-900 p-8 rounded-3xl border border-white/5 hover:border-red-600 transition group">
-                <i class="fas fa-heartbeat text-3xl text-red-600 mb-6 block group-hover:scale-110 transition"></i>
-                <h4 class="text-xl font-black mb-3 uppercase italic"><span class="fr">Fitness & Santé</span><span class="en hidden">Fitness & Health</span></h4>
-                <p class="text-white/50 text-sm"><span class="fr">Améliore ton cardio et ta vitalité durablement.</span><span class="en hidden">Boost your cardio and vitality sustainably.</span></p>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute inset-0 bg-red-600 rounded-3xl rotate-3 blur opacity-20"></div>
+                <img src="https://i.imgur.com/kIiIkuK.jpeg" alt="Coach Pepito" class="relative rounded-3xl shadow-2xl border border-white/10 w-full h-auto object-cover">
+            </div>
+            
+            <div>
+                <h2 class="text-red-600 font-black uppercase tracking-widest mb-2 text-sm">Le Coach</h2>
+                <h3 class="text-5xl font-black mb-6 text-white uppercase italic">Coach Pepito</h3>
+                <p class="text-white/70 text-lg mb-8 leading-relaxed">
+                    <span class="fr">Expert en préparation physique et transformation. Avec un Master UCL et des années d'expérience terrain, je ne laisse rien au hasard. Ici, on ne parle pas, on agit.</span>
+                    <span class="en hidden">Expert in physical preparation and transformation. With a UCL Master's and years of field experience, I leave nothing to chance. Here, we don't speak, we act.</span>
+                </p>
+                
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="bg-zinc-900 p-4 rounded-xl border-l-4 border-red-600">
+                        <h5 class="font-bold text-white">Master UCLouvain</h5>
+                        <p class="text-xs text-white/50 uppercase tracking-widest">Sciences de la Motricité</p>
+                    </div>
+                    <div class="bg-zinc-900 p-4 rounded-xl border-l-4 border-red-600">
+                        <h5 class="font-bold text-white">Certifications Élites</h5>
+                        <p class="text-xs text-white/50 uppercase tracking-widest">UEFA B • ADEPS • BSSA</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-black mb-4 uppercase text-white">Let's Perform</h2>
+            <p class="text-white/50 font-medium text-lg italic"><span class="fr">Ton premier bilan est la première étape vers le succès.</span><span class="en hidden">Your first assessment is the first step towards success.</span></p>
+        </div>
+        <form class="bg-zinc-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/5 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-600 to-black"></div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-white/60 mb-2 ml-2">Nom / Name</label>
+                    <input type="text" class="w-full p-4 bg-black border border-white/10 rounded-2xl text-white focus:border-red-600 outline-none transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-white/60 mb-2 ml-2">Email / Tel</label>
+                    <input type="text" class="w-full p-4 bg-black border border-white/10 rounded-2xl text-white focus:border-red-600 outline-none transition">
+                </div>
+            </div>
+            
+            <div class="mb-8">
+                <label class="block text-xs font-bold uppercase text-white/60 mb-2 ml-2">Objectif / Goal</label>
+                <select class="w-full p-4 bg-black border border-white/10 rounded-2xl text-white focus:border-red-600 outline-none transition font-bold">
+                    <option class="bg-zinc-900">Performance Sportive</option>
+                    <option class="bg-zinc-900">Transformation Physique</option>
+                    <option class="bg-zinc-900">Santé & Bien-être</option>
+                </select>
+            </div>
+
+            <button class="w-full bg-red-600 text-white font-black py-5 rounded-2xl hover:bg-red-700 transition shadow-xl uppercase tracking-widest text-lg transform hover:-translate-y-1">
+                <span class="fr">ENVOYER MA DEMANDE</span><span class="en hidden">SEND REQUEST</span>
+            </button>
+        </form>
+    </section>
+
     <footer class="py-16 bg-black border-t border-white/10 text-center px-6">
-        <div class="mb-10">
-            <img src="https://i.imgur.com/jpCxCcR.png" alt="Team Pepito Performance" class="mx-auto max-w-[250px] md:max-w-[350px] h-auto grayscale hover:grayscale-0 transition duration-500">
+        <div class="mb-12">
+            <img src="https://i.imgur.com/jpCxCcR.png" alt="Team Pepito Performance" class="mx-auto max-w-[400px] md:max-w-[550px] h-auto grayscale hover:grayscale-0 transition duration-500">
         </div>
         
         <div class="flex justify-center items-center space-x-12 mb-10">
