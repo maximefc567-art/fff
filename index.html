@@ -23,11 +23,7 @@
 <body class="text-white">
 
     <nav class="fixed w-full z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#home" class="flex items-center">
-                <img src="https://i.imgur.com/aVovgAz.png" alt="Team Pepito Logo" class="h-12 w-auto">
-            </a>
-            
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="hidden md:flex items-center space-x-8 font-bold text-xs uppercase tracking-widest text-white/70">
                 <a href="#home" class="nav-link nav-home-fr">Accueil</a>
                 <a href="#home" class="nav-link nav-home-en hidden">Home</a>
@@ -35,13 +31,14 @@
                 <a href="#services" class="nav-link nav-serv-en hidden">Programs</a>
                 <a href="#about" class="nav-link nav-about-fr">Le Coach</a>
                 <a href="#about" class="nav-link nav-about-en hidden">The Coach</a>
-                
                 <button onclick="toggleLanguage()" class="border border-red-600 px-3 py-1 rounded text-red-500 hover:bg-red-600 hover:text-white transition">
                     <span class="lang-btn-text">EN</span>
                 </button>
-                
-                <a href="https://calendly.com/maximefc567/1h" target="_blank" class="bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition shadow-lg shadow-red-600/20">Book Now</a>
             </div>
+
+            <a href="#home">
+                <img src="https://i.imgur.com/aVovgAz.png" alt="Team Pepito Logo" class="h-16 md:h-24 w-auto">
+            </a>
         </div>
     </nav>
 
@@ -67,184 +64,126 @@
 
     <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h3 class="text-4xl font-black uppercase"><span class="fr">Choisis ta Team</span><span class="en hidden">Choose Your Team</span></h3>
-            <p class="text-white/50 mt-4 text-sm"><span class="fr">(Clique sur un programme pour réserver)</span><span class="en hidden">(Click a program to book)</span></p>
+            <h3 class="text-4xl font-black uppercase"><span class="fr">Nos Programmes</span><span class="en hidden">Our Programs</span></h3>
         </div>
-        
         <div class="grid md:grid-cols-3 gap-8">
-            
-            <a href="https://calendly.com/maximefc567/1h" target="_blank" class="service-card block group relative h-[550px] rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-red-600 transition">
-                <img src="https://i.imgur.com/esFNGT3.jpeg" alt="Team Elite Athletes" class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-95"></div>
-                <div class="absolute bottom-0 left-0 p-8">
-                    <h4 class="text-2xl font-black uppercase italic mb-3 text-red-600 group-hover:text-white transition">Team Elite Athletes</h4>
-                    <p class="text-white/80 text-sm leading-relaxed">
-                        <span class="fr">Pour les athlètes compétitifs prêts à s'entraîner avec détermination. Coaching de haut niveau axé sur la performance, la précision et des résultats concrets. Des séances sur mesure taillées pour l'excellence !</span>
-                        <span class="en hidden">For competitive athletes ready to train with purpose. High-level coaching focused on performance, precision, and achieving real results. Customized sessions built for greatness!</span>
+            <a href="https://calendly.com/maximefc567/1h" target="_blank" class="service-card group relative h-[550px] rounded-3xl overflow-hidden border border-white/10">
+                <img src="https://i.imgur.com/esFNGT3.jpeg" alt="Elite" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+                <div class="absolute bottom-0 p-8">
+                    <h4 class="text-2xl font-black uppercase italic text-red-600">Team Elite Athletes</h4>
+                    <p class="text-white/80 text-sm mt-3">
+                        <span class="fr">Coaching de haut niveau axé sur la performance, la précision et des résultats concrets.</span>
+                        <span class="en hidden">High-level coaching focused on performance, precision, and achieving real results.</span>
                     </p>
                 </div>
             </a>
-
-            <a href="https://calendly.com/maximefc567/1h" target="_blank" class="service-card block group relative h-[550px] rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-red-600 transition">
-                <img src="https://i.imgur.com/j8fov7x.jpeg" alt="Team Kids" class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-95"></div>
-                <div class="absolute bottom-0 left-0 p-8">
-                    <h4 class="text-2xl font-black uppercase italic mb-3 text-red-600 group-hover:text-white transition">Team Kids</h4>
-                    <p class="text-white/80 text-sm leading-relaxed">
-                        <span class="fr">J'aide les jeunes à bâtir des bases solides, améliorer leur technique, gagner en confiance et découvrir le plaisir de l'entraînement. Idéal pour les jeunes athlètes, du débutant au confirmé !</span>
-                        <span class="en hidden">I help kids build strong foundations, improve technique, gain confidence, and discover the joy of training. Perfect for beginners to advanced youth athletes!</span>
+            <a href="https://calendly.com/maximefc567/1h" target="_blank" class="service-card group relative h-[550px] rounded-3xl overflow-hidden border border-white/10">
+                <img src="https://i.imgur.com/j8fov7x.jpeg" alt="Kids" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+                <div class="absolute bottom-0 p-8">
+                    <h4 class="text-2xl font-black uppercase italic text-red-600">Team Kids</h4>
+                    <p class="text-white/80 text-sm mt-3">
+                        <span class="fr">Bâtir des bases solides, gagner en confiance et découvrir le plaisir de l'entraînement.</span>
+                        <span class="en hidden">Build strong foundations, improve technique, and discover the joy of training.</span>
                     </p>
                 </div>
             </a>
-
-            <a href="https://calendly.com/maximefc567/1h" target="_blank" class="service-card block group relative h-[550px] rounded-3xl overflow-hidden cursor-pointer border border-white/10 hover:border-red-600 transition">
-                <img src="https://i.imgur.com/j8fov7x.jpeg" alt="Team Adults" class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-95"></div>
-                <div class="absolute bottom-0 left-0 p-8">
-                    <h4 class="text-2xl font-black uppercase italic mb-3 text-red-600 group-hover:text-white transition">Team Adults</h4>
-                    <p class="text-white/80 text-sm leading-relaxed">
-                        <span class="fr">Que vous débutiez, repreniez le sport ou visiez le niveau supérieur, j'entraîne tous les âges et tous les niveaux. Force, conditionnement, technique, motivation : je suis là pour guider votre progression !</span>
-                        <span class="en hidden">Whether you’re getting started, getting back into shape, or pushing yourself to the next level, I coach all ages, all levels, and all goals. Strength, conditioning, technique, motivation, I’m here to guide your progress!</span>
+            <a href="https://calendly.com/maximefc567/1h" target="_blank" class="service-card group relative h-[550px] rounded-3xl overflow-hidden border border-white/10">
+                <img src="https://i.imgur.com/j8fov7x.jpeg" alt="Adults" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+                <div class="absolute bottom-0 p-8">
+                    <h4 class="text-2xl font-black uppercase italic text-red-600">Team Adults</h4>
+                    <p class="text-white/80 text-sm mt-3">
+                        <span class="fr">Force, conditionnement, technique, motivation : je guide votre progression à tout niveau.</span>
+                        <span class="en hidden">Strength, conditioning, technique, motivation: I guide your progress at any level.</span>
                     </p>
                 </div>
             </a>
-
         </div>
     </section>
 
     <section id="about" class="py-24 bg-zinc-950">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            <div class="relative">
-                <div class="absolute inset-0 bg-red-600 rounded-3xl rotate-3 blur opacity-20"></div>
-                <img src="https://i.imgur.com/kIiIkuK.jpeg" alt="Coach Pepito" class="relative rounded-3xl shadow-2xl border border-white/10 w-full h-auto object-cover">
-            </div>
-            
+            <img src="https://i.imgur.com/kIiIkuK.jpeg" alt="Coach" class="rounded-3xl border border-white/10 shadow-2xl">
             <div>
-                <h2 class="text-red-600 font-black uppercase tracking-widest mb-2 text-sm">Le Coach</h2>
-                <h3 class="text-5xl font-black mb-6 text-white uppercase italic">Coach Pepito</h3>
-                <p class="text-white/70 text-sm md:text-base mb-6 leading-relaxed">
-                    <span class="fr">
-                        Coach sportif passionné ET spécialiste en préparation physique, performance et motricité humaine. Je suis titulaire d'un Bachelier en Éducation Physique et d'un Master en Gestion des Organisations Sportives et Préparation Physique, ainsi que de plusieurs certifications professionnelles.<br><br>
-                        Fort d'une expérience dans plusieurs disciplines, j'aide athlètes et non-athlètes à améliorer leur condition physique grâce à la préparation physique générale et spécifique, au fitness et à la transformation physique durable.<br><br>
-                        Ma mission est simple : vous aider à atteindre vos objectifs grâce à un coaching personnalisé, adapté à votre niveau, votre sport et votre mode de vie !
-                    </span>
-                    <span class="en hidden">
-                        Passionate sports coach AND physical preparation specialist, performance, and human movement. I hold a Bachelor’s degree in Physical Education and a Master’s degree in Sports Organization Management and Physical Preparation, along with several professional certifications.<br><br>
-                        With experience across multiple sports, I help athletes and non-athletes alike improve their physical condition through general and sport-specific physical preparation, fitness training, and sustainable physical transformation.<br><br>
-                        My mission is simple: to help you reach your goals through personalized coaching, adapted to your level, your sport, and your lifestyle!
-                    </span>
+                <h3 class="text-5xl font-black mb-6 uppercase italic">Coach Pepito</h3>
+                <p class="text-white/70 text-sm md:text-base leading-relaxed">
+                    <span class="fr">Passionné ET spécialiste en préparation physique, performance et motricité humaine. Diplômé d'un Bachelier en Éducation Physique et d'un Master en Gestion des Organisations Sportives... Ma mission est simple : vous aider à atteindre vos objectifs !</span>
+                    <span class="en hidden">Passionate sports coach AND physical preparation specialist... I hold a Bachelor’s degree in Physical Education and a Master’s degree in Sports Organization Management... My mission is simple: to help you reach your goals!</span>
                 </p>
-                
-                <div class="grid grid-cols-1 gap-4">
-                    <div class="bg-zinc-900 p-4 rounded-xl border-l-4 border-red-600">
-                        <h5 class="font-bold text-white">Master UCLouvain</h5>
-                        <p class="text-xs text-white/50 uppercase tracking-widest">Sport Organization & Physical Prep</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-4xl font-black mb-4 uppercase text-white">Let's Perform</h2>
-            <p class="text-white/50 font-medium text-lg italic"><span class="fr">Une question spécifique ? Envoie-moi un message.</span><span class="en hidden">A specific question? Send me a message.</span></p>
-        </div>
-        <form class="bg-zinc-900 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/5 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-600 to-black"></div>
-            
+        <h2 class="text-4xl font-black text-center mb-12 uppercase italic">Let's Perform</h2>
+        <form id="contactForm" class="bg-zinc-900 p-8 md:p-12 rounded-[2.5rem] border border-white/5">
             <div class="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                    <label class="block text-xs font-bold uppercase text-white/60 mb-2 ml-2">Nom / Name</label>
-                    <input type="text" class="w-full p-4 bg-black border border-white/10 rounded-2xl text-white focus:border-red-600 outline-none transition">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase text-white/60 mb-2 ml-2">Email / Tel</label>
-                    <input type="text" class="w-full p-4 bg-black border border-white/10 rounded-2xl text-white focus:border-red-600 outline-none transition">
-                </div>
+                <input type="text" name="name" required placeholder="Nom / Name" class="w-full p-4 bg-black border border-white/10 rounded-2xl outline-none focus:border-red-600">
+                <input type="text" name="email" required placeholder="Email / Tel" class="w-full p-4 bg-black border border-white/10 rounded-2xl outline-none focus:border-red-600">
             </div>
+            <select name="goal" class="w-full p-4 bg-black border border-white/10 rounded-2xl mb-6 outline-none focus:border-red-600">
+                <option>Renforcement / Strengthening</option>
+                <option>Tonification / Toning</option>
+                <option>Perte de poids / Weight Loss</option>
+                <option>Athlètes PPG-PPS</option>
+            </select>
+            <textarea name="message" rows="3" placeholder="Message" class="w-full p-4 bg-black border border-white/10 rounded-2xl mb-8 outline-none focus:border-red-600"></textarea>
             
-            <div class="mb-6">
-                <label class="block text-xs font-bold uppercase text-white/60 mb-2 ml-2">Objectif / Goal</label>
-                <select class="fr-select w-full p-4 bg-black border border-white/10 rounded-2xl text-white focus:border-red-600 outline-none transition font-bold">
-                    <option class="bg-zinc-900">Renforcement (Strengthening)</option>
-                    <option class="bg-zinc-900">Tonification (Toning)</option>
-                    <option class="bg-zinc-900">Prévention blessures (Injury Prevention)</option>
-                    <option class="bg-zinc-900">Perte de poids (Weight Loss)</option>
-                    <option class="bg-zinc-900">Réhabilitation (Rehab)</option>
-                    <option class="bg-zinc-900">Athlètes PPG (General Prep)</option>
-                    <option class="bg-zinc-900">Athlètes PPS (Specific Prep)</option>
-                    <option class="bg-zinc-900">Enfant (Kids)</option>
-                </select>
-
-                <select class="en-select hidden w-full p-4 bg-black border border-white/10 rounded-2xl text-white focus:border-red-600 outline-none transition font-bold">
-                    <option class="bg-zinc-900">Strengthening</option>
-                    <option class="bg-zinc-900">Toning</option>
-                    <option class="bg-zinc-900">Injury Prevention</option>
-                    <option class="bg-zinc-900">Weight Loss</option>
-                    <option class="bg-zinc-900">Rehabilitation</option>
-                    <option class="bg-zinc-900">Athletes GPP</option>
-                    <option class="bg-zinc-900">Athletes SPP</option>
-                    <option class="bg-zinc-900">Kids</option>
-                </select>
-            </div>
-
-            <div class="mb-8">
-                <label class="block text-xs font-bold uppercase text-white/60 mb-2 ml-2">Message / Comment</label>
-                <textarea rows="3" class="w-full p-4 bg-black border border-white/10 rounded-2xl text-white focus:border-red-600 outline-none transition" placeholder="..."></textarea>
-            </div>
-
-            <button class="w-full bg-red-600 text-white font-black py-5 rounded-2xl hover:bg-red-700 transition shadow-xl uppercase tracking-widest text-lg transform hover:-translate-y-1">
-                <span class="fr">ENVOYER MA DEMANDE</span><span class="en hidden">SEND REQUEST</span>
+            <button type="submit" id="submitBtn" class="w-full bg-red-600 text-white font-black py-5 rounded-2xl hover:bg-red-700 transition uppercase tracking-widest">
+                <span class="fr">Envoyer</span><span class="en hidden">Send Request</span>
             </button>
+            <div id="responseMsg" class="mt-4 text-center font-bold text-red-500 hidden">Done! Check your email soon.</div>
         </form>
     </section>
 
-    <footer class="py-16 bg-black border-t border-white/10 text-center px-6">
-        <div class="mb-12">
-            <img src="https://i.imgur.com/jpCxCcR.png" alt="Team Pepito Performance" class="mx-auto max-w-[400px] md:max-w-[550px] h-auto grayscale hover:grayscale-0 transition duration-500">
+    <footer class="py-16 bg-black border-t border-white/10 text-center">
+        <img src="https://i.imgur.com/jpCxCcR.png" alt="Footer" class="mx-auto max-w-[400px] md:max-w-[600px] mb-10 grayscale">
+        <div class="flex justify-center space-x-12 mb-10 text-4xl text-white/40">
+            <a href="https://www.facebook.com/profile.php?id=61586481653827" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/teampepito/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:maximefc567@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.google.com/search?q=Team+Pepito" target="_blank"><i class="fab fa-google"></i></a>
         </div>
-        
-        <div class="flex justify-center items-center space-x-12 mb-10">
-            <a href="https://www.facebook.com/profile.php?id=61586481653827" target="_blank" class="text-white/40 hover:text-red-600 transition text-4xl">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/teampepito/" target="_blank" class="text-white/40 hover:text-red-600 transition text-4xl">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="mailto:maximefc567@gmail.com" class="text-white/40 hover:text-red-600 transition text-4xl">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.google.com/search?q=Team+Pepito" target="_blank" class="text-white/40 hover:text-red-600 transition text-4xl">
-                <i class="fab fa-google"></i>
-            </a>
-        </div>
-        
-        <p class="text-white/20 text-[10px] font-black uppercase tracking-[0.4em]">© 2026 WE DON'T SPEAK WE ONLY PERFORM!</p>
+        <p class="text-white/20 text-xs uppercase tracking-widest">© 2026 Team Pepito</p>
     </footer>
 
     <script>
+        // Language Toggle
         function toggleLanguage() {
-            const frElems = document.querySelectorAll('.fr, .nav-home-fr, .nav-serv-fr, .nav-about-fr');
-            const enElems = document.querySelectorAll('.en, .nav-home-en, .nav-serv-en, .nav-about-en');
-            const frSelect = document.querySelector('.fr-select');
-            const enSelect = document.querySelector('.en-select');
+            const frElems = document.querySelectorAll('.fr');
+            const enElems = document.querySelectorAll('.en');
             const btnText = document.querySelector('.lang-btn-text');
-
             if (btnText.innerText === 'EN') {
                 frElems.forEach(el => el.classList.add('hidden'));
                 enElems.forEach(el => el.classList.remove('hidden'));
-                frSelect.classList.add('hidden');
-                enSelect.classList.remove('hidden');
                 btnText.innerText = 'FR';
             } else {
                 frElems.forEach(el => el.classList.remove('hidden'));
                 enElems.forEach(el => el.classList.add('hidden'));
-                frSelect.classList.remove('hidden');
-                enSelect.classList.add('hidden');
                 btnText.innerText = 'EN';
             }
         }
+
+        // Form Submission to Google Sheets
+        const form = document.getElementById('contactForm');
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby6RU9Fdv-C2Eyi9UoKRWhWc42hjhUrA4vYyLOAyjrwCGJ2mAwhyBYypM55hBUWZ9gw/exec';
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    document.getElementById('responseMsg').classList.remove('hidden');
+                    form.reset();
+                    btn.innerText = 'SENT';
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
     </script>
 </body>
 </html>
