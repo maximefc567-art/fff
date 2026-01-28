@@ -15,8 +15,14 @@
             background-size: cover; background-position: center; 
         }
         .nav-link:hover { color: #dc2626; transition: 0.3s; }
-        .price-card:hover { border-color: #dc2626; transform: translateY(-5px); transition: 0.3s; }
         .service-card .overlay { background: linear-gradient(to top, black 10%, rgba(0,0,0,0.8) 50%, transparent 100%); }
+        
+        /* Pricing Specifics */
+        .tier-card { transition: all 0.4s ease; }
+        .tier-card:hover { transform: translateY(-5px); }
+        .tier-green:hover { box-shadow: 0 0 20px rgba(34, 197, 94, 0.2); border-color: rgba(34, 197, 94, 0.5); }
+        .tier-blue:hover { box-shadow: 0 0 20px rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.5); }
+        .tier-red:hover { box-shadow: 0 0 20px rgba(220, 38, 38, 0.2); border-color: rgba(220, 38, 38, 0.5); }
     </style>
 </head>
 <body>
@@ -64,32 +70,30 @@
                 <div class="absolute bottom-0 p-8 w-full">
                     <h4 class="text-2xl font-black uppercase italic text-red-600 mb-3">Team Elite Athletes</h4>
                     <p class="text-white/90 text-sm leading-relaxed">
-                        <span class="fr">Pour les athlètes compétitifs prêts à s'entraîner avec détermination. Coaching de haut niveau axé sur la performance, la précision et des résultats concrets. Préparation physique spécifique, gestion de la pression et optimisation des performances.</span>
-                        <span class="en hidden">For competitive athletes ready to train with purpose. High-level coaching focused on performance, precision, and achieving real results. Specific physical preparation, pressure management, and performance optimization.</span>
+                        <span class="fr">Pour les athlètes compétitifs prêts à s'entraîner avec détermination. Coaching de haut niveau axé sur la performance, la précision et des résultats concrets.</span>
+                        <span class="en hidden">For competitive athletes ready to train with purpose. High-level coaching focused on performance, precision, and achieving real results.</span>
                     </p>
                 </div>
             </div>
-
             <div class="service-card group relative h-[650px] rounded-3xl overflow-hidden border border-white/10">
                 <img src="https://i.imgur.com/j8fov7x.jpeg" alt="Kids" class="absolute inset-0 w-full h-full object-cover">
                 <div class="overlay absolute inset-0"></div>
                 <div class="absolute bottom-0 p-8 w-full">
                     <h4 class="text-2xl font-black uppercase italic text-red-600 mb-3">Team Kids</h4>
                     <p class="text-white/90 text-sm leading-relaxed">
-                        <span class="fr">J'aide les jeunes à bâtir des bases solides, améliorer leur technique, gagner en confiance et découvrir le plaisir de l'entraînement. Développement moteur, coordination et renforcement de l'estime de soi à travers le sport.</span>
-                        <span class="en hidden">I help kids build strong foundations, improve technique, gain confidence, and discover the joy of training. Motor development, coordination, and self-esteem building through sports.</span>
+                        <span class="fr">J'aide les jeunes à bâtir des bases solides, améliorer leur technique, gagner en confiance et découvrir le plaisir de l'entraînement.</span>
+                        <span class="en hidden">I help kids build strong foundations, improve technique, gain confidence, and discover the joy of training.</span>
                     </p>
                 </div>
             </div>
-
             <div class="service-card group relative h-[650px] rounded-3xl overflow-hidden border border-white/10">
                 <img src="https://i.imgur.com/Uk5Wrf1.jpeg" alt="Adults" class="absolute inset-0 w-full h-full object-cover">
                 <div class="overlay absolute inset-0"></div>
                 <div class="absolute bottom-0 p-8 w-full">
                     <h4 class="text-2xl font-black uppercase italic text-red-600 mb-3">Team Adults</h4>
                     <p class="text-white/90 text-sm leading-relaxed">
-                        <span class="fr">Que vous débutiez, repreniez le sport ou visiez le niveau supérieur, j'entraîne tous les âges et tous les niveaux. Perte de poids, prise de masse, remise en forme ou défi sportif : un accompagnement sur mesure pour votre mode de vie.</span>
-                        <span class="en hidden">Whether you’re getting started, getting back into shape, or pushing yourself to the next level, I coach all levels. Weight loss, muscle gain, fitness, or sports challenges: tailored support for your lifestyle.</span>
+                        <span class="fr">Que vous débutiez, repreniez le sport ou visiez le niveau supérieur, j'entraîne tous les âges et tous les niveaux.</span>
+                        <span class="en hidden">Whether you’re getting started, getting back into shape, or pushing yourself to the next level, I coach all levels.</span>
                     </p>
                 </div>
             </div>
@@ -100,120 +104,116 @@
         <div class="max-w-7xl mx-auto px-6">
             
             <div class="bg-gradient-to-r from-red-600 to-red-800 rounded-2xl p-6 text-center mb-16 shadow-[0_0_30px_rgba(220,38,38,0.4)]">
-                <h3 class="text-2xl md:text-4xl font-black uppercase italic text-white tracking-widest">
-                    🎁 <span class="fr">OFFRE SPÉCIALE : LES 2 PREMIÈRES SÉANCES SONT OFFERTES !</span><span class="en hidden">SPECIAL OFFER: FIRST 2 SESSIONS ARE FREE!</span>
+                <h3 class="text-2xl md:text-3xl font-black uppercase italic text-white tracking-widest">
+                    <span class="fr">OFFRE SPÉCIALE : 2 PREMIÈRES SÉANCES OFFERTES !</span><span class="en hidden">SPECIAL OFFER: FIRST 2 SESSIONS FREE!</span>
                 </h3>
             </div>
 
             <div class="text-center mb-12">
-                <h2 class="text-5xl font-black uppercase italic mb-4">Tarifs / <span class="text-red-600">Pricing</span></h2>
-                <p class="text-white/50 text-sm uppercase tracking-widest">Invest in yourself</p>
+                <h2 class="text-5xl font-black uppercase italic mb-4"><span class="fr">Tarifs</span><span class="en hidden">Pricing</span></h2>
+                <p class="text-white/50 text-sm uppercase tracking-widest"><span class="fr">Investis en toi</span><span class="en hidden">Invest in yourself</span></p>
             </div>
 
-            <h3 class="text-2xl font-black uppercase mb-8 border-l-4 border-red-600 pl-4">1. Single Sessions</h3>
+            <h3 class="text-2xl font-black uppercase mb-8 border-l-4 border-white pl-4"><span class="fr">Séances Uniques</span><span class="en hidden">Single Sessions</span></h3>
             <div class="grid md:grid-cols-3 gap-6 mb-20">
-                <div class="price-card bg-zinc-900 border border-white/10 p-8 rounded-3xl relative">
-                    <div class="absolute top-4 right-4 text-3xl">🔹</div>
-                    <h4 class="text-xl font-bold uppercase text-white mb-2">Adults</h4>
-                    <div class="text-3xl font-black text-red-600 mb-4">€50 <span class="text-sm text-white/50 font-normal">/ session</span></div>
+                
+                <div class="tier-card bg-zinc-900 border border-white/10 p-8 rounded-3xl">
+                    <h4 class="text-lg font-bold uppercase text-white/60 mb-2">Adults</h4>
+                    <div class="text-3xl font-black text-white mb-4">€50 <span class="text-sm text-white/40 font-normal">/ session</span></div>
                     <ul class="text-xs text-white/70 space-y-3 mb-6">
-                        <li><strong>For:</strong> Clarity, direction, specific challenges.</li>
-                        <li><strong>Includes:</strong> 60min 1:1, tool & mindset reframes.</li>
-                        <li><strong>Best for:</strong> Breaking mental blocks, decision making.</li>
+                        <li><span class="fr"><strong>Pour:</strong> Clarté, direction, défi spécifique.</span><span class="en hidden"><strong>For:</strong> Clarity, direction, specific challenges.</span></li>
+                        <li><span class="fr"><strong>Inclus:</strong> 60min 1:1, outils & mental.</span><span class="en hidden"><strong>Includes:</strong> 60min 1:1, tool & mindset reframes.</span></li>
+                        <li><span class="fr"><strong>Idéal pour:</strong> Débloquer le mental, prise de décision.</span><span class="en hidden"><strong>Best for:</strong> Breaking mental blocks, decision making.</span></li>
                     </ul>
-                    <a href="https://calendly.com/maximefc567/1h" class="block w-full py-3 bg-white/10 hover:bg-red-600 text-center font-bold rounded-xl transition uppercase text-xs tracking-widest">Book Now</a>
                 </div>
-                <div class="price-card bg-zinc-900 border border-white/10 p-8 rounded-3xl relative">
-                    <div class="absolute top-4 right-4 text-3xl">🏆</div>
-                    <h4 class="text-xl font-bold uppercase text-white mb-2">Elite Athletes</h4>
-                    <div class="text-3xl font-black text-red-600 mb-4">€60 <span class="text-sm text-white/50 font-normal">/ session</span></div>
+                
+                <div class="tier-card bg-zinc-900 border border-white/10 p-8 rounded-3xl">
+                    <h4 class="text-lg font-bold uppercase text-white/60 mb-2">Elite Athletes</h4>
+                    <div class="text-3xl font-black text-white mb-4">€60 <span class="text-sm text-white/40 font-normal">/ session</span></div>
                     <ul class="text-xs text-white/70 space-y-3 mb-6">
-                        <li><strong>For:</strong> High-performers, pressure & mindset.</li>
-                        <li><strong>Includes:</strong> 60min performance focus, strategy.</li>
-                        <li><strong>Best for:</strong> Comp prep, plateaus, focus under pressure.</li>
+                        <li><span class="fr"><strong>Pour:</strong> Haute performance, pression.</span><span class="en hidden"><strong>For:</strong> High-performers, pressure & mindset.</span></li>
+                        <li><span class="fr"><strong>Inclus:</strong> 60min focus performance, stratégie.</span><span class="en hidden"><strong>Includes:</strong> 60min performance focus, strategy.</span></li>
+                        <li><span class="fr"><strong>Idéal pour:</strong> Compétition, plateaux, focus.</span><span class="en hidden"><strong>Best for:</strong> Comp prep, plateaus, focus under pressure.</span></li>
                     </ul>
-                    <a href="https://calendly.com/maximefc567/1h" class="block w-full py-3 bg-white/10 hover:bg-red-600 text-center font-bold rounded-xl transition uppercase text-xs tracking-widest">Book Now</a>
                 </div>
-                <div class="price-card bg-zinc-900 border border-white/10 p-8 rounded-3xl relative">
-                    <div class="absolute top-4 right-4 text-3xl">👶</div>
-                    <h4 class="text-xl font-bold uppercase text-white mb-2">Kids / Youth</h4>
-                    <div class="text-3xl font-black text-red-600 mb-4">€30 <span class="text-sm text-white/50 font-normal">/ session</span></div>
+                
+                <div class="tier-card bg-zinc-900 border border-white/10 p-8 rounded-3xl">
+                    <h4 class="text-lg font-bold uppercase text-white/60 mb-2">Kids / Youth</h4>
+                    <div class="text-3xl font-black text-white mb-4">€30 <span class="text-sm text-white/40 font-normal">/ session</span></div>
                     <ul class="text-xs text-white/70 space-y-3 mb-6">
-                        <li><strong>For:</strong> Confidence, motivation, behavior.</li>
-                        <li><strong>Includes:</strong> 30-40min age-appropriate coaching.</li>
-                        <li><strong>Best for:</strong> Emotional regulation, positive habits.</li>
+                        <li><span class="fr"><strong>Pour:</strong> Confiance, motivation, comportement.</span><span class="en hidden"><strong>For:</strong> Confidence, motivation, behavior.</span></li>
+                        <li><span class="fr"><strong>Inclus:</strong> 30-40min coaching adapté.</span><span class="en hidden"><strong>Includes:</strong> 30-40min age-appropriate coaching.</span></li>
+                        <li><span class="fr"><strong>Idéal pour:</strong> Gestion émotions, habitudes positives.</span><span class="en hidden"><strong>Best for:</strong> Emotional regulation, positive habits.</span></li>
                     </ul>
-                    <a href="https://calendly.com/maximefc567/1h" class="block w-full py-3 bg-white/10 hover:bg-red-600 text-center font-bold rounded-xl transition uppercase text-xs tracking-widest">Book Now</a>
                 </div>
             </div>
 
-            <h3 class="text-2xl font-black uppercase mb-8 border-l-4 border-red-600 pl-4">2. Monthly Commitments</h3>
+            <h3 class="text-2xl font-black uppercase mb-8 border-l-4 border-red-600 pl-4"><span class="fr">Abonnements Mensuels</span><span class="en hidden">Monthly Commitments</span></h3>
             <div class="grid md:grid-cols-3 gap-6 mb-20">
-                <div class="price-card bg-black border border-white/10 p-8 rounded-3xl">
-                    <div class="text-green-500 mb-2 font-black text-xs uppercase tracking-widest">🟢 Tier 1 • Light</div>
-                    <h4 class="text-xl font-bold uppercase text-white mb-4">Support & Direction</h4>
+                
+                <div class="tier-card tier-green bg-black border border-green-900/50 p-8 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-green-500/10 blur-3xl rounded-full"></div>
+                    <div class="text-green-500 mb-2 font-black text-xs uppercase tracking-widest">Tier 1 • Light</div>
+                    <h4 class="text-xl font-bold uppercase text-white mb-4"><span class="fr">Support & Direction</span><span class="en hidden">Support & Direction</span></h4>
                     <div class="text-3xl font-black text-white mb-6">€90–110</div>
                     <div class="space-y-4 text-xs text-white/70 mb-8">
-                        <p><strong>Who:</strong> Self-driven people needing occasional guidance.</p>
+                        <p><span class="fr">Pour les personnes autonomes ayant besoin d'un guide.</span><span class="en hidden">Self-driven people needing occasional guidance.</span></p>
                         <ul class="list-disc pl-4 space-y-1">
-                            <li>2 sessions / month (60 min)</li>
-                            <li>Simple action steps</li>
-                            <li>Light WhatsApp support</li>
-                            <li>Focus: Awareness & Patterns</li>
+                            <li><span class="fr">2 sessions / mois (60 min)</span><span class="en hidden">2 sessions / month (60 min)</span></li>
+                            <li><span class="fr">Plan d'action simple</span><span class="en hidden">Simple action steps</span></li>
+                            <li><span class="fr">Support WhatsApp léger</span><span class="en hidden">Light WhatsApp support</span></li>
+                            <li><span class="fr">Focus: Prise de conscience</span><span class="en hidden">Focus: Awareness & Patterns</span></li>
                         </ul>
                     </div>
-                    <a href="https://calendly.com/maximefc567/1h" class="block w-full py-3 bg-white text-black hover:bg-green-500 hover:text-white text-center font-bold rounded-xl transition uppercase text-xs tracking-widest">Select Tier 1</a>
                 </div>
 
-                <div class="price-card bg-zinc-900 border-2 border-red-600 transform md:-translate-y-4 p-8 rounded-3xl relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Most Popular</div>
-                    <div class="text-blue-500 mb-2 font-black text-xs uppercase tracking-widest">🔵 Tier 2 • Standard</div>
-                    <h4 class="text-xl font-bold uppercase text-white mb-4">Progress & Account.</h4>
+                <div class="tier-card tier-blue bg-black border border-blue-900/50 p-8 rounded-3xl relative overflow-hidden transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-blue-500/10 blur-3xl rounded-full"></div>
+                    <div class="text-blue-500 mb-2 font-black text-xs uppercase tracking-widest">Tier 2 • Standard</div>
+                    <h4 class="text-xl font-bold uppercase text-white mb-4"><span class="fr">Progrès & Responsabilité</span><span class="en hidden">Progress & Account.</span></h4>
                     <div class="text-4xl font-black text-white mb-6">€180–200</div>
                     <div class="space-y-4 text-xs text-white/70 mb-8">
-                        <p><strong>Who:</strong> Want consistent progress & weekly structure.</p>
+                        <p><span class="fr">Pour un progrès constant et une structure hebdo.</span><span class="en hidden">Want consistent progress & weekly structure.</span></p>
                         <ul class="list-disc pl-4 space-y-1">
-                            <li>4 sessions / month (60 min)</li>
-                            <li>Weekly planning & tracking</li>
-                            <li>Regular WhatsApp check-ins</li>
-                            <li>Focus: Consistency & Execution</li>
+                            <li><span class="fr">4 sessions / mois (60 min)</span><span class="en hidden">4 sessions / month (60 min)</span></li>
+                            <li><span class="fr">Planification & Suivi hebdo</span><span class="en hidden">Weekly planning & tracking</span></li>
+                            <li><span class="fr">Check-ins réguliers</span><span class="en hidden">Regular WhatsApp check-ins</span></li>
+                            <li><span class="fr">Focus: Exécution & Constance</span><span class="en hidden">Focus: Consistency & Execution</span></li>
                         </ul>
                     </div>
-                    <a href="https://calendly.com/maximefc567/1h" class="block w-full py-4 bg-red-600 hover:bg-red-700 text-center font-bold rounded-xl transition uppercase text-xs tracking-widest text-white">Select Tier 2</a>
                 </div>
 
-                <div class="price-card bg-black border border-white/10 p-8 rounded-3xl">
-                    <div class="text-red-500 mb-2 font-black text-xs uppercase tracking-widest">🔴 Tier 3 • High</div>
-                    <h4 class="text-xl font-bold uppercase text-white mb-4">Deep Work</h4>
+                <div class="tier-card tier-red bg-black border border-red-900/50 p-8 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-red-600/10 blur-3xl rounded-full"></div>
+                    <div class="text-red-500 mb-2 font-black text-xs uppercase tracking-widest">Tier 3 • High</div>
+                    <h4 class="text-xl font-bold uppercase text-white mb-4"><span class="fr">Travail Profond</span><span class="en hidden">Deep Work</span></h4>
                     <div class="text-3xl font-black text-white mb-6">€220–250</div>
                     <div class="space-y-4 text-xs text-white/70 mb-8">
-                        <p><strong>Who:</strong> Fast progress, high pressure, deep work.</p>
+                        <p><span class="fr">Progrès rapide, haute pression, performance.</span><span class="en hidden">Fast progress, high pressure, deep work.</span></p>
                         <ul class="list-disc pl-4 space-y-1">
-                            <li>4 sessions / month</li>
-                            <li>Priority WhatsApp (Voice notes)</li>
-                            <li>Mid-week check-ins</li>
-                            <li>Focus: High Performance</li>
+                            <li><span class="fr">4 sessions / mois</span><span class="en hidden">4 sessions / month</span></li>
+                            <li><span class="fr">WhatsApp Prioritaire (Vocaux)</span><span class="en hidden">Priority WhatsApp (Voice notes)</span></li>
+                            <li><span class="fr">Check-ins mi-semaine</span><span class="en hidden">Mid-week check-ins</span></li>
+                            <li><span class="fr">Focus: Haute Performance</span><span class="en hidden">Focus: High Performance</span></li>
                         </ul>
                     </div>
-                    <a href="https://calendly.com/maximefc567/1h" class="block w-full py-3 bg-white text-black hover:bg-red-600 hover:text-white text-center font-bold rounded-xl transition uppercase text-xs tracking-widest">Select Tier 3</a>
                 </div>
             </div>
 
-            <h3 class="text-2xl font-black uppercase mb-8 border-l-4 border-red-600 pl-4">3. The Pass</h3>
+            <h3 class="text-2xl font-black uppercase mb-8 border-l-4 border-white/50 pl-4"><span class="fr">Le Pass</span><span class="en hidden">The Pass</span></h3>
             <div class="bg-zinc-900 border border-white/10 p-8 md:p-12 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-8">
                 <div class="md:w-2/3">
-                    <h4 class="text-3xl font-black uppercase italic mb-2">🎟️ 10-Session Pass</h4>
-                    <p class="text-white/60 mb-6">Flexibility without monthly commitment. Pay upfront, book when needed.</p>
+                    <h4 class="text-3xl font-black uppercase italic mb-2"><span class="fr">Pass 10 Séances</span><span class="en hidden">10-Session Pass</span></h4>
+                    <p class="text-white/60 mb-6"><span class="fr">Flexibilité totale sans engagement mensuel. Payez en une fois, réservez quand vous voulez.</span><span class="en hidden">Flexibility without monthly commitment. Pay upfront, book when needed.</span></p>
                     <ul class="grid md:grid-cols-2 gap-4 text-sm text-white/80">
-                        <li><i class="fas fa-check text-red-600 mr-2"></i> 10 x 60min Sessions</li>
-                        <li><i class="fas fa-check text-red-600 mr-2"></i> Flexible Scheduling</li>
-                        <li><i class="fas fa-check text-red-600 mr-2"></i> Personalized Guidance</li>
-                        <li><i class="fas fa-check text-red-600 mr-2"></i> Goal-Oriented</li>
+                        <li><i class="fas fa-check text-red-600 mr-2"></i> <span class="fr">10 x 60min Séances</span><span class="en hidden">10 x 60min Sessions</span></li>
+                        <li><i class="fas fa-check text-red-600 mr-2"></i> <span class="fr">Planning Flexible</span><span class="en hidden">Flexible Scheduling</span></li>
+                        <li><i class="fas fa-check text-red-600 mr-2"></i> <span class="fr">Guidance Personnalisée</span><span class="en hidden">Personalized Guidance</span></li>
+                        <li><i class="fas fa-check text-red-600 mr-2"></i> <span class="fr">Orienté Objectifs</span><span class="en hidden">Goal-Oriented</span></li>
                     </ul>
                 </div>
                 <div class="text-center md:text-right">
                     <div class="text-4xl font-black text-white mb-4">€420–450</div>
-                    <a href="https://calendly.com/maximefc567/1h" class="inline-block px-8 py-4 bg-white text-black hover:bg-red-600 hover:text-white font-black rounded-xl transition uppercase tracking-widest">Get The Pass</a>
                 </div>
             </div>
 
@@ -245,21 +245,26 @@
             
             <div class="mb-6">
                 <select name="goal" class="w-full p-4 bg-black border border-white/10 rounded-2xl text-white outline-none focus:border-red-600 font-bold">
-                    <option>Renforcement / Strengthening</option>
-                    <option>Tonification / Toning</option>
-                    <option>Perte de poids / Weight Loss</option>
-                    <option>Athlètes PPG-PPS</option>
-                    <option>Team Kids</option>
-                    <option>Pricing Inquiry</option>
+                    <option value="Single - Adult">Single Session - Adults (€50)</option>
+                    <option value="Single - Elite">Single Session - Elite (€60)</option>
+                    <option value="Single - Kids">Single Session - Kids (€30)</option>
+                    <option value="Tier 1">Tier 1 - Light (€90-110)</option>
+                    <option value="Tier 2">Tier 2 - Standard (€180-200)</option>
+                    <option value="Tier 3">Tier 3 - High (€220-250)</option>
+                    <option value="10 Pass">10-Session Pass (€420-450)</option>
+                    <option value="Other">Other / Question</option>
                 </select>
             </div>
 
             <textarea name="message" rows="3" placeholder="Message / Comment" class="w-full p-4 bg-black border border-white/10 rounded-2xl mb-8 outline-none focus:border-red-600"></textarea>
 
             <button type="submit" id="submitBtn" class="w-full bg-red-600 text-white font-black py-5 rounded-2xl hover:bg-red-700 transition uppercase tracking-widest text-lg">
-                <span class="fr">ENVOYER MA DEMANDE</span><span class="en hidden">SEND REQUEST</span>
+                <span class="fr">ENVOYER & RÉSERVER</span><span class="en hidden">SEND & BOOK NOW</span>
             </button>
-            <div id="responseMsg" class="mt-6 text-center font-bold text-green-500 hidden uppercase tracking-widest">✓ Message Sent!</div>
+            <div id="responseMsg" class="mt-6 text-center font-bold text-green-500 hidden uppercase tracking-widest">
+                <span class="fr">✓ Reçu ! Redirection vers Calendly...</span>
+                <span class="en hidden">✓ Received! Redirecting to Calendly...</span>
+            </div>
         </form>
     </section>
 
@@ -274,6 +279,7 @@
     </footer>
 
     <script>
+        // LANGUAGE TOGGLE
         function toggleLanguage() {
             const frElems = document.querySelectorAll('.fr');
             const enElems = document.querySelectorAll('.en');
@@ -289,22 +295,34 @@
             }
         }
 
+        // FORM SUBMISSION + REDIRECT
         const form = document.getElementById('contactForm');
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwwENRxm1NlbgiQjQDc_0ERIHXdqOzHWP8T2peoZOc3nJCjdcw5Ehl88IWAsO4wCaE/exec';
 
         form.addEventListener('submit', e => {
             e.preventDefault();
             const btn = document.getElementById('submitBtn');
-            btn.disabled = true; btn.innerText = '...';
+            const msg = document.getElementById('responseMsg');
+            
+            btn.disabled = true; 
+            btn.innerText = '...';
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response => {
-                document.getElementById('responseMsg').classList.remove('hidden');
+                msg.classList.remove('hidden');
                 form.reset();
-                btn.innerText = 'SENT';
-                setTimeout(() => { btn.disabled = false; btn.innerText = 'ENVOYER MA DEMANDE'; }, 3000);
+                btn.innerText = '✓';
+                
+                // REDIRECT AFTER 2 SECONDS
+                setTimeout(() => {
+                    window.location.href = "https://calendly.com/maximefc567/1h";
+                }, 2000);
             })
-            .catch(error => { console.error('Error!', error.message); btn.disabled = false; btn.innerText = 'RETRY'; });
+            .catch(error => { 
+                console.error('Error!', error.message); 
+                btn.disabled = false; 
+                btn.innerText = 'RETRY'; 
+            });
         });
     </script>
 </body>
