@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Pepito | WE DON'T SPEAK WE ONLY PERFORM!</title>
+    
+    <link rel="icon" type="image/png" href="https://i.imgur.com/aVovgAz.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -17,7 +20,6 @@
         .nav-link:hover { color: #dc2626; transition: 0.3s; }
         .service-card .overlay { background: linear-gradient(to top, black 15%, rgba(0,0,0,0.8) 60%, transparent 100%); }
         
-        /* Footer Icon Colors */
         .footer-icon { transition: all 0.3s ease; color: #4b5563; }
         .fa-facebook:hover { color: #1877f2; transform: translateY(-3px); }
         .fa-instagram:hover { color: #e4405f; transform: translateY(-3px); }
@@ -29,6 +31,15 @@
         
         .price-list li { margin-bottom: 8px; display: flex; align-items: flex-start; }
         .price-list i { margin-top: 4px; margin-right: 8px; font-size: 10px; color: #dc2626; }
+
+        /* Animation menu mobile */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.active {
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body>
@@ -36,8 +47,9 @@
     <nav class="fixed w-full z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="flex items-center">
-                <img src="https://i.imgur.com/aVovgAz.png" alt="Team Pepito Logo" class="h-16 md:h-24 w-auto drop-shadow-[0_0_15px_rgba(220,38,38,0.2)]">
+                <img src="https://i.imgur.com/aVovgAz.png" alt="Team Pepito Logo" class="h-12 md:h-20 w-auto drop-shadow-[0_0_15px_rgba(220,38,38,0.2)]">
             </a>
+
             <div class="hidden md:flex items-center space-x-8 font-bold text-xs uppercase tracking-widest text-white/70">
                 <a href="#home" class="nav-link fr">Accueil</a><a href="#home" class="nav-link en hidden">Home</a>
                 <a href="#about" class="nav-link fr">Le Coach</a><a href="#about" class="nav-link en hidden">The Coach</a>
@@ -46,20 +58,34 @@
                 <button onclick="toggleLanguage()" class="border border-red-600 px-3 py-1 rounded text-red-500 hover:bg-red-600 hover:text-white transition"><span class="lang-btn-text">EN</span></button>
                 <a href="#contact" class="bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition shadow-lg uppercase text-[10px]">Book Now</a>
             </div>
+
+            <button id="menu-btn" class="md:hidden text-2xl text-white">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-black border-l border-white/10 z-[60] flex flex-col p-8 space-y-6 md:hidden shadow-2xl">
+            <button id="close-btn" class="self-end text-2xl mb-4"><i class="fas fa-times"></i></button>
+            <a href="#home" class="mobile-link fr text-xl font-black">ACCUEIL</a><a href="#home" class="mobile-link en hidden text-xl font-black">HOME</a>
+            <a href="#about" class="mobile-link fr text-xl font-black">LE COACH</a><a href="#about" class="mobile-link en hidden text-xl font-black">THE COACH</a>
+            <a href="#services" class="mobile-link fr text-xl font-black">PROGRAMMES</a><a href="#services" class="mobile-link en hidden text-xl font-black">PROGRAMS</a>
+            <a href="#pricing" class="mobile-link fr text-xl font-black">TARIFS</a><a href="#pricing" class="mobile-link en hidden text-xl font-black">PRICING</a>
+            <button onclick="toggleLanguage()" class="text-left text-red-500 font-bold uppercase tracking-widest">Langue: <span class="lang-btn-text">EN</span></button>
+            <a href="#contact" class="bg-red-600 text-white text-center py-4 rounded-xl font-black uppercase tracking-widest">Book Now</a>
         </div>
     </nav>
 
     <section id="home" class="hero-gradient h-screen flex items-center justify-center text-center px-6">
         <div class="max-w-5xl">
             <div class="inline-block border-2 border-red-600 text-red-500 text-xs font-black px-6 py-1 rounded-md mb-6 uppercase tracking-[0.4em] bg-red-600/10">SPORTS COACH</div>
-            <h1 class="text-5xl md:text-8xl font-black text-white mb-6 leading-none tracking-tighter uppercase italic">WE DON'T SPEAK<br><span class="text-red-600 uppercase">WE ONLY PERFORM!</span></h1>
-            <a href="#contact" class="bg-red-600 text-white px-12 py-5 rounded-xl font-black text-lg hover:bg-red-700 transition uppercase tracking-tight shadow-xl shadow-red-600/40">
+            <h1 class="text-4xl md:text-8xl font-black text-white mb-6 leading-none tracking-tighter uppercase italic">WE DON'T SPEAK<br><span class="text-red-600 uppercase">WE ONLY PERFORM!</span></h1>
+            <a href="#contact" class="bg-red-600 text-white px-10 py-4 md:px-12 md:py-5 rounded-xl font-black text-lg hover:bg-red-700 transition uppercase tracking-tight shadow-xl shadow-red-600/40">
                 <span class="fr">Réserver mon bilan</span><span class="en hidden">Book a Session</span>
             </a>
         </div>
     </section>
 
-    <section id="about" class="py-32 px-6 bg-zinc-950 relative overflow-hidden">
+    <section id="about" class="py-24 md:py-32 px-6 bg-zinc-950 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-96 h-96 bg-red-600/5 blur-[120px] rounded-full"></div>
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
             <div class="relative group">
@@ -71,7 +97,7 @@
                 </div>
             </div>
             <div>
-                <h3 class="text-6xl font-black mb-8 uppercase italic leading-none">Coach <span class="text-red-600">Pepito</span></h3>
+                <h3 class="text-5xl md:text-6xl font-black mb-8 uppercase italic leading-none">Coach <span class="text-red-600">Pepito</span></h3>
                 <div class="space-y-6 border-l-4 border-red-600 pl-8">
                     <p class="text-white/80 text-sm md:text-base leading-relaxed">
                         <span class="fr">Coach sportif passionné ET spécialiste en préparation physique, performance et motricité humaine. Titulaire d'un Bachelier en Éducation Physique et d'un Master en Gestion des Organisations Sportives et Préparation Physique.</span>
@@ -95,15 +121,15 @@
             <h3 class="text-4xl font-black uppercase italic"><span class="fr">Choisis ta Team</span><span class="en hidden">Choose Your Team</span></h3>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="service-card group relative h-[550px] rounded-3xl overflow-hidden border border-white/10">
-                <img src="https://imgur.com/t24b4iD.jpeg" alt="Elite Athletes" class="absolute inset-0 w-full h-full object-cover">
+            <div class="service-card group relative h-[500px] md:h-[550px] rounded-3xl overflow-hidden border border-white/10">
+                <img src="https://i.imgur.com/t24b4iD.jpeg" alt="Elite Athletes" class="absolute inset-0 w-full h-full object-cover">
                 <div class="overlay absolute inset-0"></div>
                 <div class="absolute bottom-0 p-8 w-full">
                     <h4 class="text-2xl font-black uppercase italic text-red-600 mb-3">Team Elite Athletes</h4>
                     <p class="text-white/70 text-sm"><span class="fr">Haute performance et précision pour athlètes compétitifs.</span><span class="en hidden">High performance and precision for competitive athletes.</span></p>
                 </div>
             </div>
-            <div class="service-card group relative h-[550px] rounded-3xl overflow-hidden border border-white/10">
+            <div class="service-card group relative h-[500px] md:h-[550px] rounded-3xl overflow-hidden border border-white/10">
                 <img src="https://i.imgur.com/j8fov7x.jpeg" alt="Kids" class="absolute inset-0 w-full h-full object-cover">
                 <div class="overlay absolute inset-0"></div>
                 <div class="absolute bottom-0 p-8 w-full">
@@ -111,7 +137,7 @@
                     <p class="text-white/70 text-sm"><span class="fr">Confiance, motricité et plaisir pour les jeunes de demain.</span><span class="en hidden">Confidence, motor skills, and fun for future champions.</span></p>
                 </div>
             </div>
-            <div class="service-card group relative h-[550px] rounded-3xl overflow-hidden border border-white/10">
+            <div class="service-card group relative h-[500px] md:h-[550px] rounded-3xl overflow-hidden border border-white/10">
                 <img src="https://i.imgur.com/Uk5Wrf1.jpeg" alt="Adults" class="absolute inset-0 w-full h-full object-cover">
                 <div class="overlay absolute inset-0"></div>
                 <div class="absolute bottom-0 p-8 w-full">
@@ -123,79 +149,37 @@
     </section>
 
     <section id="pricing" class="py-24 bg-zinc-950 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-black uppercase italic mb-4"><span class="fr">Tarifs</span><span class="en hidden">Pricing</span></h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <a href="#contact" class="tier-card bg-zinc-900/40 p-8 rounded-3xl block">
-                    <h4 class="text-sm font-bold uppercase text-white/40 mb-2 italic">Adults Session</h4>
-                    <div class="text-3xl font-black text-white mb-6">€50 <span class="text-xs">/ 60 min</span></div>
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-black uppercase italic mb-16"><span class="fr">Tarifs</span><span class="en hidden">Pricing</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="tier-card bg-zinc-900/40 p-8 rounded-3xl text-left">
+                    <h4 class="text-sm font-bold uppercase text-white/40 mb-2 italic">Session Unique</h4>
+                    <div class="text-3xl font-black text-white mb-6">€50-60 <span class="text-xs">/ 60 min</span></div>
                     <ul class="price-list text-[11px] text-white/70 uppercase">
-                        <li><i class="fas fa-circle"></i> <span class="fr">Clarté et direction spécifique</span><span class="en hidden">Clarity & specific direction</span></li>
-                        <li><i class="fas fa-circle"></i> <span class="fr">Outils pratiques et mindset</span><span class="en hidden">Practical tools & mindset</span></li>
-                        <li><i class="fas fa-circle"></i> <span class="fr">Idéal pour débloquer le mental</span><span class="en hidden">Best for breaking mental blocks</span></li>
+                        <li><i class="fas fa-circle"></i> Coaching 1:1 personnalisé</li>
+                        <li><i class="fas fa-circle"></i> Analyse technique complète</li>
+                        <li><i class="fas fa-circle"></i> Action plan immédiat</li>
                     </ul>
-                </a>
-                <a href="#contact" class="tier-card bg-zinc-900/40 p-8 rounded-3xl block border-red-600/20">
-                    <h4 class="text-sm font-bold uppercase text-red-500 mb-2 italic">Elite Athletes</h4>
-                    <div class="text-3xl font-black text-white mb-6">€60 <span class="text-xs">/ 60 min</span></div>
+                </div>
+                <div class="tier-card bg-zinc-900/40 p-8 rounded-3xl text-left border-red-600/30">
+                    <div class="text-blue-500 font-black text-[10px] uppercase mb-4 tracking-widest italic">Plus Populaire</div>
+                    <div class="text-3xl font-black text-white mb-6">€180-200 <span class="text-xs">/ mois</span></div>
                     <ul class="price-list text-[11px] text-white/70 uppercase">
-                        <li><i class="fas fa-star"></i> <span class="fr">Focus haute performance</span><span class="en hidden">High-performance focus</span></li>
-                        <li><i class="fas fa-star"></i> <span class="fr">Gestion de la pression</span><span class="en hidden">Pressure management</span></li>
-                        <li><i class="fas fa-star"></i> <span class="fr">Préparation compétition</span><span class="en hidden">Competition preparation</span></li>
+                        <li><i class="fas fa-star"></i> 4 séances par mois</li>
+                        <li><i class="fas fa-star"></i> Suivi WhatsApp hebdo</li>
+                        <li><i class="fas fa-star"></i> Planning d'entraînement</li>
                     </ul>
-                </a>
-                <a href="#contact" class="tier-card bg-zinc-900/40 p-8 rounded-3xl block">
-                    <h4 class="text-sm font-bold uppercase text-white/40 mb-2 italic">Kids / Youth</h4>
-                    <div class="text-3xl font-black text-white mb-6">€30 <span class="text-xs">/ 60 min</span></div>
+                </div>
+                <div class="tier-card bg-zinc-900/40 p-8 rounded-3xl text-left">
+                    <h4 class="text-sm font-bold uppercase text-red-500 mb-2 italic">Elite Performance</h4>
+                    <div class="text-3xl font-black text-white mb-6">€220-250 <span class="text-xs">/ mois</span></div>
                     <ul class="price-list text-[11px] text-white/70 uppercase">
-                        <li><i class="fas fa-child"></i> <span class="fr">Confiance et motivation</span><span class="en hidden">Confidence & motivation</span></li>
-                        <li><i class="fas fa-child"></i> <span class="fr">Régulation émotionnelle</span><span class="en hidden">Emotional regulation</span></li>
-                        <li><i class="fas fa-child"></i> <span class="fr">Habitudes positives</span><span class="en hidden">Positive habits</span></li>
+                        <li><i class="fas fa-bolt"></i> Suivi haute performance</li>
+                        <li><i class="fas fa-bolt"></i> Support prioritaire 24/7</li>
+                        <li><i class="fas fa-bolt"></i> Préparation compétition</li>
                     </ul>
-                </a>
+                </div>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <a href="#contact" class="tier-card bg-black p-8 rounded-3xl block border-green-900/30">
-                    <div class="text-green-500 font-black text-[10px] uppercase mb-4 tracking-widest">Tier 1 • Support</div>
-                    <div class="text-3xl font-black text-white mb-6">€90–110</div>
-                    <ul class="price-list text-[11px] text-white/60 space-y-3">
-                        <li>• <span class="fr">4 séances / mois (60 min)</span><span class="en hidden">2 sessions / month (60 min)</span></li>
-                        <li>• <span class="fr">Support WhatsApp léger</span><span class="en hidden">Light WhatsApp support</span></li>
-                        <li>• <span class="fr">Focus : Conscience et patterns</span><span class="en hidden">Focus: Awareness & patterns</span></li>
-                    </ul>
-                </a>
-                <a href="#contact" class="tier-card bg-black p-8 rounded-3xl block border-red-600 shadow-2xl scale-105 relative z-10">
-                    <div class="text-blue-500 font-black text-[10px] uppercase mb-4 tracking-widest">Tier 2 • Progress</div>
-                    <div class="text-4xl font-black text-white mb-6">€180–200</div>
-                    <ul class="price-list text-[11px] text-white/80 space-y-3">
-                        <li>• <span class="fr">4 séances / mois (60 min)</span><span class="en hidden">4 sessions / month (60 min)</span></li>
-                        <li>• <span class="fr">Structure et suivi hebdo</span><span class="en hidden">Weekly structure & planning</span></li>
-                        <li>• <span class="fr">Accompagnement WhatsApp</span><span class="en hidden">WhatsApp accountability</span></li>
-                    </ul>
-                </a>
-                <a href="#contact" class="tier-card bg-black p-8 rounded-3xl block border-red-900/30">
-                    <div class="text-red-500 font-black text-[10px] uppercase mb-4 tracking-widest">Tier 3 • Performance</div>
-                    <div class="text-3xl font-black text-white mb-6">€220–250</div>
-                    <ul class="price-list text-[11px] text-white/60 space-y-3">
-                        <li>• <span class="fr">4 séances + Suivi prioritaire</span><span class="en hidden">4 sessions + Priority support</span></li>
-                        <li>• <span class="fr">Check-ins milieu de semaine</span><span class="en hidden">Mid-week check-ins</span></li>
-                        <li>• <span class="fr">Deep Work & Performance</span><span class="en hidden">Deep Work & Performance</span></li>
-                    </ul>
-                </a>
-            </div>
-
-            <a href="#contact" class="tier-card bg-zinc-900/60 p-10 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between group">
-                <div>
-                    <h4 class="text-2xl font-black uppercase italic mb-2">🎟️ 10-Session Pass</h4>
-                        <li> <span class="fr">10 séances de coaching de 60 minutes</span><span class="en hidden">10 séances de coaching de 60 minutes</span></li>
-                        <li> <span class="fr">Planification flexible</span><span class="en hidden">Planification flexible</span></li>
-                        <li> <span class="fr">Accompagnement personnalisé lors de chaque séance</span><span class="en hidden">Accompagnement personnalisé lors de chaque séance</span></li>                </div>
-                <div class="text-4xl font-black text-red-600 group-hover:scale-110 transition">€420–450</div>
-            </a>
         </div>
     </section>
 
@@ -208,13 +192,9 @@
             </div>
             <div class="mb-6">
                 <select name="goal" class="w-full p-4 bg-black border border-white/10 rounded-2xl text-white outline-none focus:border-red-600 font-bold">
-                    <option value="Single - Adult">Single Session - Adults (€50)</option>
-                    <option value="Single - Elite">Single Session - Elite (€60)</option>
-                    <option value="Single - Kids">Single Session - Kids (€30)</option>
-                    <option value="Tier 1">Tier 1 - Light (€90-110)</option>
-                    <option value="Tier 2">Tier 2 - Standard (€180-200)</option>
-                    <option value="Tier 3">Tier 3 - High (€220-250)</option>
-                    <option value="10 Pass">10-Session Pass (€420-450)</option>
+                    <option value="Elite">Team Elite Athletes</option>
+                    <option value="Kids">Team Kids</option>
+                    <option value="Adults">Team Adults</option>
                 </select>
             </div>
             <textarea name="message" rows="3" placeholder="Message / Comment" class="w-full p-4 bg-black border border-white/10 rounded-2xl mb-8 outline-none focus:border-red-600"></textarea>
@@ -228,7 +208,7 @@
     </section>
 
     <footer class="py-16 bg-black border-t border-white/10 text-center px-6">
-        <img src="https://i.imgur.com/jpCxCcR.png" alt="Footer Logo" class="mx-auto max-w-[400px] mb-10 grayscale opacity-50">
+        <img src="https://i.imgur.com/jpCxCcR.png" alt="Footer Logo" class="mx-auto max-w-[300px] mb-10 grayscale opacity-50">
         <div class="flex justify-center space-x-12 mb-10 text-4xl">
             <a href="https://www.facebook.com/profile.php?id=61586481653827" target="_blank" class="footer-icon fab fa-facebook"></a>
             <a href="https://www.instagram.com/teampepito/" target="_blank" class="footer-icon fab fa-instagram"></a>
@@ -239,21 +219,37 @@
     </footer>
 
     <script>
+        // TOGGLE MENU MOBILE
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => mobileMenu.classList.add('active'));
+        closeBtn.addEventListener('click', () => mobileMenu.classList.remove('active'));
+        mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+
+        // TOGGLE LANGUE
         function toggleLanguage() {
             const frElems = document.querySelectorAll('.fr');
             const enElems = document.querySelectorAll('.en');
-            const btnText = document.querySelector('.lang-btn-text');
-            if (btnText.innerText === 'EN') {
+            const btnTexts = document.querySelectorAll('.lang-btn-text');
+            
+            const currentLang = btnTexts[0].innerText;
+            const newLang = currentLang === 'EN' ? 'FR' : 'EN';
+
+            btnTexts.forEach(t => t.innerText = newLang);
+
+            if (currentLang === 'EN') {
                 frElems.forEach(el => el.classList.add('hidden'));
                 enElems.forEach(el => el.classList.remove('hidden'));
-                btnText.innerText = 'FR';
             } else {
                 frElems.forEach(el => el.classList.remove('hidden'));
                 enElems.forEach(el => el.classList.add('hidden'));
-                btnText.innerText = 'EN';
             }
         }
 
+        // FORMULAIRE
         const form = document.getElementById('contactForm');
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwwENRxm1NlbgiQjQDc_0ERIHXdqOzHWP8T2peoZOc3nJCjdcw5Ehl88IWAsO4wCaE/exec';
 
